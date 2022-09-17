@@ -2,6 +2,7 @@
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
@@ -12,10 +13,12 @@ table{
   width: 800px;
   height: 200px;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 th {
   border: 1px solid black;
+  width: 400px;
 }
   
 td {
@@ -23,18 +26,17 @@ td {
   border: 1px solid forestgreen ;
 }
 
-td button{
+a{
   text-decoration: none;
-  width: 60%;
-  height: 20px;
+  width: 150px;
+  height: 40px;
   border-radius: 0;
-  padding: 3px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 10px;
   border: 1px solid black;
   background-color: rgb(60, 176, 60);
   color: white;
   cursor: pointer;
+
 }
 
 
