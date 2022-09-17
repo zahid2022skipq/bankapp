@@ -27,11 +27,6 @@ function App() {
           <Link to="transaction">Transfer Funds</Link>
         </div>
       </div>
-
-      <Routes>
-        <Route exact path="/*" element={<App />} />
-        <Route exact path="/transaction" element={<Transaction />} />
-      </Routes>
     </>
   );
 }
