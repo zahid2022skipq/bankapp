@@ -2,8 +2,6 @@ import "./App.css";
 import data from "./utils/Data_Users";
 
 function App() {
-  // const [customer, setCustomer] = useState("");
-
   return (
     <div className="App">
       <table>
