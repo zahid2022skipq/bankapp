@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import data from "./utils/Data_Users";
 
 function App() {
+  // const [customer, setCustomer] = useState("");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <table>
+        <tbody>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>View</th>
+          </tr>
+          {data.map((d) => (
+            <tr key={d.id}>
+              <td>{d.name}</td>
+              <td>{d.email}</td>
+              <td>
+                <div>
+                  <button>Show</button>
+                </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
