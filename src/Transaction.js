@@ -32,12 +32,18 @@ function Transaction() {
         </tbody>
       </table>
       {senderId !== "" ? (
-        <div className="Sender">Sender Selected: {senderId}</div>
+        <div className="Sender">
+          Sender Selected:{" "}
+          {data.map((id) => (id.id === senderId ? id.name : ""))}
+        </div>
       ) : (
         <div> </div>
       )}
       {receiverId !== "" ? (
-        <div className="Receiver">Receiver Selected: {receiverId} </div>
+        <div className="Receiver">
+          Receiver Selected:{" "}
+          {data.map((id) => (id.id === receiverId ? id.name : ""))}
+        </div>
       ) : (
         <div></div>
       )}

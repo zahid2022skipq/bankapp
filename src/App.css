@@ -40,5 +40,14 @@ a{
 }
 
 
+.Sender, .Receiver{
+  color: white;
+  background-color: rgb(6, 88, 6);
+  padding: 20px;
+  border-radius: 20px;
+  transition: 0.5s ease-in;
+  margin-bottom: 5px;
+}
+
 
 
