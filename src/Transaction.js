@@ -2,14 +2,6 @@ import React, { useState } from "react";
 import data from "./utils/Data_Users";
 
 function Transaction() {
-  const handleSender = (id) => {
-    setSenderId(id);
-  };
-
-  const handleReceiver = (id) => {
-    setReceiverId(id);
-  };
-
   const [senderId, setSenderId] = useState("");
   const [receiverId, setReceiverId] = useState("");
 
@@ -30,15 +22,25 @@ function Transaction() {
               <td>{d.email}</td>
               <td>{d.currentBalance}</td>
               <td>
-                <button onClick={handleSender(d.id)}> Sender </button>
-                <button onClick={handleReceiver(d.id)}> Receiver </button>
+                <button onClick={() => setSenderId(d.id)}> Sender </button>
+              </td>
+              <td>
+                <button onClick={() => setReceiverId(d.id)}> Receiver </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
-      {senderId !== "" ? <div> Sender Selected</div> : <div></div>}
-      {receiverId !== "" ? <div> Receiver Selected</div> : <div></div>}
+      {senderId !== "" ? (
+        <div className="Sender">Sender Selected: {senderId}</div>
+      ) : (
+        <div> </div>
+      )}
+      {receiverId !== "" ? (
+        <div className="Receiver">Receiver Selected: {receiverId} </div>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 }
